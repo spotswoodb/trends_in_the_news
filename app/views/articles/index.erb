@@ -1,3 +1,6 @@
 <% @articles.each do |a| %>
     <p><%= a.title %> - <%= a.id %> </p>
+        <a href="/articles/<%= a.id %>/edit">Edit</a>
+        <% end %>
+    </p>
 <% end %>

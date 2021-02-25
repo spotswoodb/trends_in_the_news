@@ -1,7 +1,7 @@
 require './config/environment'
 
 
-
-# use NewsArticlesController
-# use UsersController
+use Rack::MethodOverride
+use ArticlesController
+use UsersController
 run ApplicationController
