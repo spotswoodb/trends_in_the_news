@@ -10,4 +10,10 @@
 # The user should be able to signup, login, or logout from the homepage
 ## Login or Logout from any other page
 
+### Questions
+
 # When I create a migrations, do I need to wait until they're all created to run db:migrate?
+
+# do articles need to have a notes attribute or is that separate?
+# Do users need a user_id attribute and do categories need a category_id attribute? Or is this done automatically when I create a table in the database?
+

@@ -3,4 +3,5 @@ class User < ActiveRecord::Base
     has_many :categories, through: :articles
 
     has_secure_password
+
 end
