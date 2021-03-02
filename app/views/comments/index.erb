@@ -1,0 +1,7 @@
+<% @comments.each do |c| %>
+    <p><%= c.title %> - <%= c.id %> 
+        <% if current_user == c.user %>
+            <a href="/comments/<%= c.id %>/edit">Edit</a> 
+        <% end %>
+    </p>
+<% end %>

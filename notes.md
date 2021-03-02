@@ -17,3 +17,10 @@
 # do articles need to have a notes attribute or is that separate?
 # Do users need a user_id attribute and do categories need a category_id attribute? Or is this done automatically when I create a table in the database?
 
+# 3/1/21
+## I want the user to be able to pick from categories once they've logged in
+### i.e. home page "Log in to get started!"
+### then categories populate
+### click a category and you are redirected to a page with articles inside that category
+### click an article and comments will display relevant to that article (this is where the user has the ability to edit and save comments)
+### DO I WANT THE WHOLE ARTICLE TO APPEAR OR JUST THE COMMENTS ON THE ARTICLE WITH A RELEVANT LINK?
