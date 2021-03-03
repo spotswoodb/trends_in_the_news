@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-    has_many :articles
-    has_many :categories, through: :articles
+    has_many :comments
+    has_many :articles, through: :comments
 
     has_secure_password
 

@@ -1,0 +1,9 @@
+Title: <%= @comment.title %><br>
+Content: <%= @comment.content %><br>
+
+<a href="/articles/<%= @article.id %>/comments/<%= @comment.id %>/edit">Edit Post</a>
+
+<form action="/articles/<%= @article.id %>/comments/<%= @comment.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Comment">
+</form>
