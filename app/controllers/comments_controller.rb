@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
         # CREATE
         get '/articles/:article_id/comments/new' do
             # if current_user
+            get_article
                 erb :'comments/new'
             # else
                 # redirect '/login'
@@ -26,6 +27,7 @@ class CommentsController < ApplicationController
     
         # SHOW
         get '/articles/:article_id/comments/:id' do
+            get_article
             get_comment
             erb :'comments/show'
         end

@@ -1,4 +1,4 @@
-<form action="/articles/:article_id/comments" method="post">
+<form action="/articles/<%= @article.id %>/comments" method="post">
     Title: <input type="text" name="title">
     Content: <textarea name="content"></textarea>
     <input type="submit" value="Create Comment">
