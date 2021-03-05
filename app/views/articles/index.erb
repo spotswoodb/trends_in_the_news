@@ -1,0 +1,8 @@
+<% @articles.each do |a| %>
+    <p><a href="/articles/<%= a.id %>"><%= a.title %></a> - <%= a.date %> 
+        <%= a.content %>
+    </p>
+<% end %>
+
+
+

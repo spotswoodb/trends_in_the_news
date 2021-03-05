@@ -42,6 +42,7 @@ class CommentsController < ApplicationController
         # UPDATE
     
         patch '/articles/:article_id/comments/:id' do
+            get_article
             get_comment
             redirect_if_not_authorized
             @comment.update(title: params[:title], content: params[:content])
@@ -54,6 +55,7 @@ class CommentsController < ApplicationController
         # DESTROY
     
         delete '/articles/:article_id/comments/:id' do
+            get_article
             get_comment
             @comment.destroy
             redirect "/articles/#{@article.id}/comments"

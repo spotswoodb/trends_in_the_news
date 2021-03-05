@@ -1,8 +1,5 @@
-<% @articles.each do |a| %>
-    <p><%= a.title %> - <%= a.date %> 
-        <%= a.content %>
-    </p>
-<% end %>
+Title: <%= @article.title %><br>
+Date: <%= @article.date %><br>
+Content: <%= @article.content %><br>
 
-
-
+<a href="/articles/<%= @article.id %>/comments/new">Add Comment To Article</a>
