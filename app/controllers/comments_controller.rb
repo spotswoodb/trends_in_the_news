@@ -3,18 +3,18 @@ class CommentsController < ApplicationController
         # READ
         get '/articles/:article_id/comments' do   
             article = Article.find_by(id:params[:article_id])
-            @comments = article.comments
+            @comments = article.comments.select {|c| c.user == current_user}
             erb :'comments/index'
         end
         
         # CREATE
         get '/articles/:article_id/comments/new' do
-            # if current_user
-            get_article
+            if current_user
+                get_article
                 erb :'comments/new'
-            # else
-                # redirect '/login'
-            # end
+            else
+                redirect '/login'
+            end
         end
     
         post '/articles/:article_id/comments' do
