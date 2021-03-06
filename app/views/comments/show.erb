@@ -1,9 +1,16 @@
+<h2><%= @article.title %></h2>
+
 Title: <%= @comment.title %><br>
 Content: <%= @comment.content %><br>
 
-<a href="/articles/<%= @article.id %>/comments/<%= @comment.id %>/edit">Edit Post</a>
+<div>
+    <a href="/articles/<%= @article.id %>/comments/<%= @comment.id %>/edit">Edit Comment</a><br>
 
-<form action="/articles/<%= @article.id %>/comments/<%= @comment.id %>" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete Comment">
-</form>
+    <form action="/articles/<%= @article.id %>/comments/<%= @comment.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete Comment">
+    </form>
+</div>
+<p>
+    <a href="/articles/<%= @article.id %>/comments">View Other Comments On This Article</a><br>
+</p>

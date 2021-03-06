@@ -1,5 +1,9 @@
-Title: <%= @article.title %><br>
+<h2><%= @article.title %></h2>
 Date: <%= @article.date %><br>
 Content: <%= @article.content %><br>
 
-<a href="/articles/<%= @article.id %>/comments/new">Add Comment To Article</a>
+<% if logged_in? %>
+    <a href="/articles/<%= @article.id %>/comments/new">Add Comment To Article</a><br>
+<% elsif logged_in? && !@article.comments.empty? %>
+    <a href="/articles/<%= @article.id %>/comments">View comments on this article</a>
+<% end %>

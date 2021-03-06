@@ -12,9 +12,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
+    <ul>
+      <li><a href="/">TrendsInTheNews</a></li>
+      <li><a href="/articles">Articles</a></li>
+      <% if logged_in? %>
+        <li><a href="/articles/archives">Archive</a></li>
+        <a href="/logout">Logout</a>
+      <% else %>
+        <a href="/login">Login</a><br>
+        <a href="/signup">Signup</a>
+      <% end %>
+    </ul>
   </head>
   <body>
-    <h1>Hello from layout</h1>
+    <h1>TrendsInTheNews</h1>
+
     <div class="wrapper">
           <% flash.keys.each do |type| %>
               <div data-alert class="flash <%= type %> alert-box radius">

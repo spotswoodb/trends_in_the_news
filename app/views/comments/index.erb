@@ -1,6 +1,25 @@
-<% @comments.each do |c| %>
-    <p><%= c.title %> - <%= c.id %> 
-            <a href="/articles/<%= c.article_id %>/comments/<%= c.id %>/edit">Edit</a> 
+<h2><%= @article.title %></h2>
 
-        </p>
+<% @comments.each do |c| %>
+    <p>
+    Title: <%= c.title %> - <%= c.id %><br>
+    Description:<br>
+    <%= c.content %><br>
+            
+<div>  
+    <a href="/articles/<%= c.article_id %>/comments/<%= c.id %>/edit">Edit Comment</a>
+
+
+    <form action="/articles/<%= c.article_id %>/comments/<%= c.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete Comment">
+    </form> 
+</div>
+
+    </p>
 <% end %>
+<div>
+    <p><a href="/articles/<%= @article.id %>/comments/new">Add A New Comment To This Article</a></p>
+</div>
+
+

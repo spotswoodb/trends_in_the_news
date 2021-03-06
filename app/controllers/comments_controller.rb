@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
 
         # READ
-        get '/articles/:article_id/comments' do   
+        
+        get '/articles/:article_id/comments' do 
+            get_article  
             article = Article.find_by(id:params[:article_id])
             @comments = article.comments.select {|c| c.user == current_user}
             erb :'comments/index'

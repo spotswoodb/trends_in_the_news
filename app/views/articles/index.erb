@@ -1,3 +1,8 @@
+<h2>New Articles</h2>
+<p>
+    <h4>Click Through To Read The Full Article</h4>
+</p>
+
 <% @articles.each do |a| %>
     <p><a href="/articles/<%= a.id %>"><%= a.title %></a> - <%= a.date %> 
         <%= a.content %>

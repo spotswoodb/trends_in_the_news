@@ -1,0 +1,12 @@
+<h2>Comments Archive</h2>
+
+<% @uniq_articles.each do |a| %>
+   <div>
+      <p>
+         Title: <%= a.title %><br>
+         Date: <%= a.date %><br>
+         <%= a.content %><br>
+         <a href="/articles/<%= a.id %>/comments">Comments on this article</a><br>
+      </p>
+   </div>
+<% end %>
