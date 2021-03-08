@@ -22,5 +22,5 @@ class ApplicationController < Sinatra::Base
     !!session[:user_id]
   end
 
-  # archive route where users can view their stored articles
+
 end

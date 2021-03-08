@@ -51,8 +51,6 @@ class CommentsController < ApplicationController
             redirect "/articles/#{@article.id}/comments/#{@comment.id}"
         end
         
-        # get_comment - can I work in the article variable instead of always writing it out?
-        # any where I put :article_id in a route, do I have to pull that specfic article id in the method?
 
         # DESTROY
     

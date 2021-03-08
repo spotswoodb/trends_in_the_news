@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
     <ul>
-      <li><a href="/">TrendsInTheNews</a></li>
       <li><a href="/articles">Articles</a></li>
       <% if logged_in? %>
         <li><a href="/articles/archives">Archive</a></li>
@@ -25,7 +24,7 @@
     </ul>
   </head>
   <body>
-    <h1>TrendsInTheNews</h1>
+    <h1><a href="/">TrendsInTheNews</a></h1>
 
     <div class="wrapper">
           <% flash.keys.each do |type| %>
