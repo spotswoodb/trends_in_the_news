@@ -61,7 +61,10 @@ class CommentsController < ApplicationController
             redirect "/articles/#{@article.id}/comments"
         end
 
+    private
+
         def get_article
+            binding.pry
             @article = Article.find_by(id:params[:article_id])
         end    
         
