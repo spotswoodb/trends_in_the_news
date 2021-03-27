@@ -4,6 +4,8 @@ Content: <%= @article.content %><br>
 
 <% if logged_in? %>
     <a href="/articles/<%= @article.id %>/comments/new">Add Comment To Article</a><br>
-<% elsif logged_in? && !@article.comments.empty? %>
+<% end %>
+
+<% if logged_in? && !@article.comments.empty? %>
     <a href="/articles/<%= @article.id %>/comments">View comments on this article</a>
 <% end %>

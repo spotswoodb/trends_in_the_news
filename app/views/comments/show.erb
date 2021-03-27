@@ -4,6 +4,7 @@ Title: <%= @comment.title %><br>
 Content: <%= @comment.content %><br>
 
 <div>
+    
     <a href="/articles/<%= @article.id %>/comments/<%= @comment.id %>/edit">Edit Comment</a><br>
 
     <form action="/articles/<%= @article.id %>/comments/<%= @comment.id %>" method="post">

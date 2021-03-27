@@ -7,13 +7,14 @@
     <%= c.content %><br>
             
 <div>  
-    <a href="/articles/<%= c.article_id %>/comments/<%= c.id %>/edit">Edit Comment</a>
-
+    <% if c.user_id == current_user.id %>
+        <a href="/articles/<%= c.article_id %>/comments/<%= c.id %>/edit">Edit Comment</a>
 
     <form action="/articles/<%= c.article_id %>/comments/<%= c.id %>" method="post">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="Delete Comment">
     </form> 
+    <% end %>
 </div>
 
     </p>

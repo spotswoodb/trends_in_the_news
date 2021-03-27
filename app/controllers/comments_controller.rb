@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
         get '/articles/:article_id/comments' do 
             get_article  
             article = Article.find_by(id:params[:article_id])
-            @comments = article.comments.select {|c| c.user == current_user}
+            @comments = article.comments
             erb :'comments/index'
         end
         
@@ -64,7 +64,6 @@ class CommentsController < ApplicationController
     private
 
         def get_article
-            binding.pry
             @article = Article.find_by(id:params[:article_id])
         end    
         
