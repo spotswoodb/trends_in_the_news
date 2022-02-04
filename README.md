@@ -2,7 +2,7 @@
 
 ## Overview
 
-It’s my job to check the news every day in order to stay up to date on trends, but I always have to search around to find what I’m looking for. I thought it would be nice to have a centralized place where I can view news articles, leave comments on those articles, and save them to an archive I can refer back to. This tool was made for all marketers. Created in March of 2021 - it's not live on the web but will be soon.
+It’s my job to check the news every day in order to stay up to date on trends, but I always have to search around to find what I’m looking for. I thought it would be nice to have a centralized place where I can view news articles, leave comments on those articles, and save them to an archive I can refer back to. This tool was made for all marketers. Created in March of 2021 - it's not live on the web yet.
 
 ## Configuration
 
